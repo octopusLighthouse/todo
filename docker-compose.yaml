@@ -1,16 +1,5 @@
 version: '3.7'
 services:
-    dashboard:
-        build:
-            context: ./dashboard
-            target: DEV
-        ports:
-            - "80:80"
-        volumes:
-            - ./dashboard:/app
-        networks:
-            - orange
-
     auth:
         build:
             context: ./auth
@@ -25,24 +14,6 @@ services:
             - .env
         networks:
             - orange
-
-    zecq:
-        build:
-            context: ./zecq
-            target: DEV
-        ports: 
-            - "5000:5000"
-
-
-        environment: 
-            - ENV_NAME=DEV
-        env_file:
-            - .env
-        volumes:
-            - ./zecq:/app
-        networks:
-            - orange
-
 
 networks:
     orange:
