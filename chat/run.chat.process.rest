@@ -1,0 +1,8 @@
+###
+POST http://localhost:3300/chat
+Content-Type: application/json
+
+{
+    "phrase": "Wifi",
+    "language": "NL"
+}

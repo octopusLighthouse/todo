@@ -15,6 +15,21 @@ services:
         networks:
             - orange
 
+    chat:
+        build:
+            context: ./chat
+            target: DEV
+        ports:
+            - "3300:3300"
+
+        environment: 
+            - TEST=true
+
+        env_file:
+            - .env
+        networks:
+            - orange
+
     teacher:
         build:
             context: ./train
