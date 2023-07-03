@@ -15,6 +15,21 @@ services:
         networks:
             - orange
 
+    teacher:
+        build:
+            context: ./train
+            target: DEV
+        ports:
+            - "5777:5777"
+
+        environment: 
+            - TEST=true
+
+        env_file:
+            - .env
+        networks:
+            - orange
+
     back:
         build:
             context: ./back
