@@ -4,7 +4,6 @@
 myenv/
 back/migrations
 __pycache__
-=======
 # Logs
 logs
 *.log
