@@ -1,0 +1,37 @@
+version: '3.7'
+services:
+    auth:
+        build:
+            context: ./auth
+            target: DEV
+        ports:
+            - "3000:3000"
+
+        environment: 
+            - TEST=true
+
+        env_file:
+            - .env
+        networks:
+            - orange
+
+    back:
+        build:
+            context: ./back
+            target: DEV
+        ports:
+            - "5000:5000"
+
+        environment:
+            - ENV_NAME=DEV
+
+        env_file:
+            - .env
+        volumes:
+            - ./back:/app
+        networks:
+            - orange
+
+networks:
+    orange:
+        driver: bridge
