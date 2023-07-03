@@ -1,0 +1,2 @@
+from .location_controller import blp as LocationBlueprint
+from .location_repository import PlainLocationSchema
