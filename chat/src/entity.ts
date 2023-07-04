@@ -41,6 +41,9 @@ export class Response {
   @Column()
   language: string;
 
+  @Column()
+  clasificator: string;
+
   @ManyToOne(() => Intent, (intent) => intent.responses)
   @JoinColumn({ name: 'intentid' })
   intent: Intent;

@@ -3,5 +3,5 @@ POST http://localhost:5777/train
 Content-Type: application/json
 
 {
-    "language": "NL"
+    "language": "EN"
 }

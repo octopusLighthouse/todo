@@ -3,6 +3,6 @@ POST http://localhost:3300/chat
 Content-Type: application/json
 
 {
-    "phrase": "Wifi",
-    "language": "NL"
+    "phrase": "I want order Apple Pie",
+    "language": "EN"
 }
