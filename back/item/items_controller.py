@@ -21,5 +21,9 @@ class Item(MethodView):
 class RemoveTag(MethodView):
     @blp.response(200, TagAndItemSchema)
     def delete(self, item_id, tag_id):
+
+
+
+
         deleted_tag = ItemRepository.delete_tag(item_id, tag_id)
         return deleted_tag

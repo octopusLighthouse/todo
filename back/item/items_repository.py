@@ -1,6 +1,9 @@
 from ..common_imports import *
 from .items_service import create_model
 from ..tag import PlainTagSchema, TagModel
+from sqlalchemy.exc import SQLAlchemyError, IntegrityError, ProgrammingError, DataError
+from flask_smorest import abort
+
 class ItemModel(db.Model):
     __tablename__ = "items"
 
@@ -43,8 +46,11 @@ class ItemRepository:
 
         item.tags.remove(tag)
 
-        db.session.add(item)
-        db.session.commit()
+        try:
+            db.session.add(item)
+            db.session.commit()
+        except SQLAlchemyError:
+            abort(500, message="Tag not associated with the item")
 
         return {"message": "Tag removed from item", "item": item, "tag": tag}
 

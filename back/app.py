@@ -14,6 +14,7 @@ from .traindata import ResponseModel, ResponseBlueprint
 from .traindata import greetings_responses, menu_responses, bestellen_responses
 from .tag import TagBlueprint
 from .category import CategoryBlueprint
+from .chatbot import ChatBlueprint
 def create_app():
     app = Flask(__name__)
 
@@ -33,7 +34,7 @@ def create_app():
     api.register_blueprint(PatternBlueprint)
     api.register_blueprint(ResponseBlueprint)
     api.register_blueprint(TagBlueprint)
-    api.register_blueprint(CategoryBlueprint)
+    api.register_blueprint(ChatBlueprint)
 
 
 

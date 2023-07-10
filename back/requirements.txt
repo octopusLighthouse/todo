@@ -13,3 +13,4 @@ flask-migrate
 psycopg2
 requests
 qrcode
+fuzzywuzzy
