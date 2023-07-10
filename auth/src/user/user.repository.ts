@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 import { User } from './entities/user.entity';
@@ -47,7 +46,6 @@ export class UserRepository extends Repository<User> {
 	// }
 	
 }
-=======
 import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 import { User } from './entities/user.entity';
@@ -96,4 +94,3 @@ export class UserRepository extends Repository<User> {
 	// }
 	
 }
->>>>>>> 301111d518bb2e036389ca433f95e73821f33627

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Controller, Get, Put, Post, Body, Patch, Param, Query, Delete } from '@nestjs/common';
 import { UserService } from './user.service';
 // import { userPostReqDto } from './dto/request/user.post.dto';
@@ -33,7 +32,6 @@ export class userController {
 
 
 }
-=======
 import { Controller, Get, Put, Post, Body, Patch, Param, Query, Delete } from '@nestjs/common';
 import { UserService } from './user.service';
 // import { userPostReqDto } from './dto/request/user.post.dto';
@@ -68,4 +66,3 @@ export class userController {
 
 
 }
->>>>>>> 301111d518bb2e036389ca433f95e73821f33627

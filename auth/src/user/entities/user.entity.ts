@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Column, Entity, OneToMany, OneToOne, ManyToOne, ManyToMany, PrimaryColumn } from 'typeorm';
 import { v4 as uuidv4 } from 'uuid';
 import * as moment from 'moment';
@@ -34,7 +33,6 @@ export class User {
 		this.createdAt = moment().utc().toDate();
 	}
 }
-=======
 import { Column, Entity, OneToMany, OneToOne, ManyToOne, ManyToMany, PrimaryColumn } from 'typeorm';
 import { v4 as uuidv4 } from 'uuid';
 import * as moment from 'moment';
@@ -70,4 +68,3 @@ export class User {
 		this.createdAt = moment().utc().toDate();
 	}
 }
->>>>>>> 301111d518bb2e036389ca433f95e73821f33627
